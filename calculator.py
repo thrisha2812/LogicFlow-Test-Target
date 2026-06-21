@@ -10,7 +10,7 @@ class UserManager:
         if not user:
             return False
         
-        # BUG 1: Missing closing parenthesis
+        
         if user.get("password") == self._hash_password(password:
             self._active_sessions[username] = True
             return True
