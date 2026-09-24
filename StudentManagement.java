@@ -128,7 +128,7 @@ class ReportService {
     public void displayStudentGrade(int id) {
 
         Student student =
-            manager.findStudent(id);
+            manager.findStudent(student);
 
         if (student == null) {
             System.out.println("Student not found");
