@@ -154,7 +154,7 @@ class BorrowService {
 
     public void borrowBook(int memberId, int bookId) {
 
-        Member member = library.findMember(memberId);
+        Member member = library.findMember(member);
         Book book = library.findBook(bookId);
 
         if (member == null) {
