@@ -9,7 +9,7 @@ grid=[
 
 def is_valid(pos):
     x,y=pos
-    return 0<=x<len(grid)and 0<=y<len(grid[0])and grid[x][y]!=1
+    return 0<=x<len(grd)and 0<=y<len(grid[0])and grid[x][y]!=1
 
 def reflex_agent(start,goal):
     pos=start
