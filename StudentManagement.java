@@ -125,18 +125,14 @@ class ReportService {
         );
     }
 
-    public void displayStudentGrade(int id) {
-
-        Student student =
-            manager.findStudent(student);
-
-        if (student == null) {
-            System.out.println("Student not found");
-            return;
-        }
-
-        gradeService.displayGrade(student);
+public void displayStudentGrade(int id) {
+    Student student = manager.findStudent(id);
+    if (student == null) {
+        System.out.println("Student not found");
+        return;
     }
+    gradeService.displayGrade(student);
+}
 }
 
 public class StudentManagement {
@@ -173,8 +169,4 @@ public class StudentManagement {
         report.displayStudentGrade(101);
         report.displayStudentGrade(102);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5f8f9a762e2bde4a980afb2b784f36e9fca0ea76
