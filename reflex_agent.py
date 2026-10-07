@@ -9,7 +9,7 @@ grid=[
 
 def is_valid(pos):
     x,y=pos
-    return 0<=x<len(grd)and 0<=y<len(grid[0])and grid[x][y]!=1
+    return 0<=x<len(grid[0]) and 0<=y<len(grid) and grid[x][y]!=1
 
 def reflex_agent(start,goal):
     pos=start
@@ -20,7 +20,6 @@ def reflex_agent(start,goal):
         x,y=pos
         best_moves=None
         best_dist=float('inf')
-        print(best_dist)
         for dx,dy in moves:
             new_pos=(x+dx,y+dy)
             if is_valid(new_pos):
@@ -29,13 +28,12 @@ def reflex_agent(start,goal):
                     best_dist=dist
                     best_move=new_pos
 
-
         if best_move is None:
-         valid=[(x+dx,y+dy)for dx,dy in moves if is_valid(x+dx,y+dy)]
-         if not valid:
-            print("Agent is stuck")   
-            return 
-         best_move=random.choice(valid)   
+            valid=[(x+dx,y+dy) for dx,dy in moves if is_valid(x+dx,y+dy)]
+            if not valid:
+                print("Agent is stuck")
+                return 
+            best_move=random.choice(valid)
         pos=best_move
         path.append(pos)
     return path
